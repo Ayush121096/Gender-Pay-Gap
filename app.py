@@ -19,7 +19,6 @@ def load_data():
     df = pd.read_csv('Gender Pay Gap.csv')
     return df
 df = load_data()
-
 st.title('Gender Pay Gap')
 st.image('https://miro.medium.com/max/540/1*J_EXEmUkOcg-rgzJudUhZQ.png')
 st.header('This is an analysis with the Graphs')
@@ -28,7 +27,7 @@ ops=['Intro','Analysis Job Title','Analysis (IT, Graphic Designer, Data Scientis
 choice=st.sidebar.selectbox('Select an option',ops)
 if choice==ops[0]:
     st.write('In this analysis we can understand that, which field effects salary. This analysis gives infromation about Male and Female salary difference whth respect of different fields.  ')
-    st.subheader()
+    st.write('Summary :-1 It shows the Basepay of people in different field, 2 In this analysis we get that in the Data scientis , Female get highest pay in compariosn to Male. Male get approx equal salary in IT and data scientist, 3 we check on the condition in IT where age is less than 25, we see that male have much salary then female , 4 we find that software engineer get maximum pay, 5 Male Manager get max pay, 6 we see that there are more males in Graphic Designer field and females in Marketing Associate field , whose salary is less 40K and exp greater than 2 yrs, 7 Phd holder get higher salary in comparison to others')
 elif choice==ops[1]:
     ops2=['Pie','Histogram']
     choice2=st.selectbox('Select an option',ops2)
@@ -45,7 +44,7 @@ elif choice==ops[1]:
         st.plotly_chart(fig1)
         btn = st.button('Show result')
         if btn:
-            st.header('In this analysis we get that in the Data scientis , Female get highest pay in compariosn to Male. Male get approx equal salary in IT and data scientist')
+            st.subheader('In this analysis we get that in the Data scientis , Female get highest pay in compariosn to Male. Male get approx equal salary in IT and data scientist')
     
 
 elif choice==ops[2]:
@@ -75,7 +74,7 @@ elif choice==ops[2]:
         st.plotly_chart(fig5)
         btn = st.button('Show Result')
         if btn:
-            st.header('In the Data Scientist Female get max salary comparison to all three fields')
+            st.subheader('In this analysis we get that in the Data scientis , Female get highest pay in compariosn to Male')
 
     st.subheader('Here In this figure we used condition that is Jobtitle IT and Age >25')
     g1 = df['JobTitle'] =='IT'
@@ -89,7 +88,7 @@ elif choice==ops[2]:
 
     btn = st.button('Show result')
     if btn:
-        st.subheader('we check on the condition in IT where age is than 25, we see that male have much salary then female')
+        st.subheader('we check on the condition in IT where age is less than 25, we see that male have much salary then female')
 
 elif choice==ops[3]:
     st.subheader('Here we can see the histogram with respect of jobtitles and basepay')
@@ -108,7 +107,7 @@ elif choice==ops[4]:
     st.plotly_chart(fig6)
     btn = st.button('Show Results')
     if btn:
-        st.subheader('As a Male Manager get max pay')
+        st.subheader('Male Manager get max pay')
 
 elif choice==ops[5]:
     st.subheader('Histogram with condition aplly in seniorty{experience},BasePay')
