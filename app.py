@@ -27,7 +27,7 @@ ops=['Intro','Analysis Job Title','Analysis (IT, Graphic Designer, Data Scientis
 choice=st.sidebar.selectbox('Select an option',ops)
 if choice==ops[0]:
     st.write('In this analysis we can understand that, which field effects salary. This analysis gives infromation about Male and Female salary difference whth respect of different fields.  ')
-    st.write('Summary :-1 It shows the Basepay of people in different field, 2 In this analysis we get that in the Data scientis , Female get highest pay in compariosn to Male. Male get approx equal salary in IT and data scientist, 3 we check on the condition in IT where age is less than 25, we see that male have much salary then female , 4 we find that software engineer get maximum pay, 5 Male Manager get max pay, 6 we see that there are more males in Graphic Designer field and females in Marketing Associate field , whose salary is less 40K and exp greater than 2 yrs, 7 Phd holder get higher salary in comparison to others')
+    st.text('Summary :- \n 1 It shows the Basepay of people in different field \n 2 In this analysis we get that in the Data scientis , Female get highest pay in compariosn to Male. Male get approx equal salary in IT and data scientist \n 3 we check on the condition in IT where age is less than 25, we see that male have much salary then female \n 4 we find that software engineer get maximum pay \n 5 Male Manager get max pay \n 6 we see that there are more males in Graphic Designer field and females in Marketing Associate field , whose salary is less 40K and exp greater than 2 yrs \n 7 Phd holder get higher salary in comparison to others')
 elif choice==ops[1]:
     ops2=['Pie','Histogram']
     choice2=st.selectbox('Select an option',ops2)
@@ -110,7 +110,7 @@ elif choice==ops[4]:
         st.subheader('Male Manager get max pay')
 
 elif choice==ops[5]:
-    st.subheader('Histogram with condition aplly in seniorty{experience},BasePay')
+    st.subheader('Histogram with condition apply in seniorty(experience),BasePay')
      
     c1 = df['BasePay'] <= 40000 
     c2 = df['Seniority'] >= 2
