@@ -4,8 +4,6 @@ to run the app:-
 2. type 'streamlit run app.py'
 '''
 
-
-from tkinter.ttk import Style
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
