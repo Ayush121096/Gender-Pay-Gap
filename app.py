@@ -16,7 +16,7 @@ import streamlit as st
 
 @st.cache
 def load_data():
-    df = pd.read_csv('Gender Pay Gap.csv')
+    df = pd.read_csv('dataset/Gender Pay Gap.csv')
     return df
 df = load_data()
 st.title('Gender Pay Gap')
